@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,11 +149,11 @@
                 Film<span class="highlight">Hub</span>
             </div>
             <nav class="header-links">
-                <a href="FILM HUB.html">HOME</a>
-                <a href="Movies.html">MOVIES</a>
-                <a href="Locations.html">LOCATIONS</a>
-                <a href="Meals.html">MEALS AND BEVRAGES</a>
-                <a href="advetise.html">ADVERTISE</a>
+                <a href="index.jsp">HOME</a>
+                <a href="Movies.jsp">MOVIES</a>
+                <a href="Locations.jsp">LOCATIONS</a>
+                <a href="Meals.jsp">MEALS AND BEVRAGES</a>
+                <a href="advetise.jsp">ADVERTISE</a>
             </nav>
             <div class="header-actions">
                 <a href="Buy tickets.html" class="buy-tickets">BUY TICKETS</a>

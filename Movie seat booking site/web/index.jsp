@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@
 
         /* Header */
         .header {
-            background-color: #000000;
+            background-color: #1a1a1a;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -238,89 +240,6 @@
         footer a:hover {
             color: #ffffff;
         }
-         /* Header styling */
-         .header {
-            width: 100%;
-            padding: 20px;
-            background-color: #1a1a1a;
-            color: #f4f4f4;
-            text-align: center;
-            font-size: 24px;
-        }
-
-        /* Slideshow container styling */
-        .slideshow-container {
-            position: relative;
-            width: 80%;
-            max-width: 800px;
-            margin: 20px auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Slides styling */
-        .slide {
-            display: none;
-        }
-
-        .slide img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.5s ease;
-        }
-
-        /* Hover effect */
-        .slide img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Slideshow navigation buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-            border-radius: 3px;
-            user-select: none;
-        }
-
-        .prev {
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .next {
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        /* Slide indicator dots */
-        .dots-container {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-
-        .active, .dot:hover {
-            background-color: #717171;
-        }
     </style>
 </head>
 <body>
@@ -330,11 +249,11 @@
             Film<span class="highlight">Hub</span>
         </div>
         <nav class="header-links">
-            <a href="FILM HUB.html">HOME</a>
-            <a href="Movies.html">MOVIES</a>
-            <a href="Locations.html">LOCATIONS</a>
-            <a href="Meals.html">MEALS AND BEVERAGES</a>
-            <a href="advetise.html">ADVERTISE</a>
+            <a href="index.jsp">HOME</a>
+            <a href="Movies.jsp">MOVIES</a>
+            <a href="Locations.jsp">LOCATIONS</a>
+            <a href="Meals.jsp">MEALS AND BEVERAGES</a>
+            <a href="advetise.jsp">ADVERTISE</a>
         </nav>
         <div class="header-actions">
             <a href="Buy tickets.html" class="buy-tickets">BUY TICKETS</a>
@@ -342,79 +261,90 @@
         </div>
     </header>
 
-    <!-- Header -->
-    <div class="header">Welcome to Our Image Slideshow</div>
-
-    <!-- Slideshow Container -->
-    <div class="slideshow-container">
-        <!-- Slide 1 -->
-        <div class="slide">
-            <img src="ad1.jpg" alt="Slide 1">
+    <!-- Main Banner -->
+    <section class="main-banner">
+        <div class="banner-content">
+            <h1 class="banner-title">Venom: The Last Dance</h1>
+            <p class="banner-subtitle">IN CINEMAS 8TH NOVEMBER</p>
+            <p class="banner-text">BUY TICKETS ONLINE</p>
+            <div class="banner-buttons">
+                <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
+                <a href="https://www.youtube.com/watch?v=__2bjWbetsA" class="watch-trailer">WATCH TRAILER</a>
+            </div>
         </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <div>
+          <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to FILM HUB</h1><br>
+        <a>Welcome to FILM HUB â your ultimate destination for a premium cinema experience. Our website is designed to make movie-going convenient, engaging, and enjoyable. With a modern, user-friendly interface, you can easily browse through the latest movies, explore upcoming releases, and find exclusive deals tailored just for you. Our "Now Showing" section provides quick access to currently playing films, and the "Coming Soon" section allows you to set reminders for movies youâre excited about. Additionally, you can view cinema locations with detailed information and interactive maps, making it easier than ever to find the nearest theater.
+            <br>
+            <br>
 
-        <!-- Slide 2 -->
-        <div class="slide">
-            <img src="ad2.png" alt="Slide 2">
+            With a secure online ticketing system, you can book your seats in advance and skip the queues. Registered users can also enjoy exclusive perks and rewards through our FILM HUB loyalty program. The websiteâs seamless design and interactive hover animations add a touch of sophistication, enhancing your browsing experience. Whether you're looking for action-packed blockbusters, family-friendly animations, or suspenseful thrillers, FILM HUB has something for every movie lover. Enjoy the magic of cinema like never before!
+        </a>
+<br>
+<br>
+<br>
+
+        <!-- Coming Soon Section -->
+        <div class="coming-soon">
+            <h2>Coming Soon</h2>
+            <div class="movie-grid">
+                <!-- Movie Item -->
+                <div class="movie-item">
+                    <img src="M1.jpg" alt="Movie 1">
+                    <div class="movie-info">
+                        <h3>Captain America: Brave New World (2025)</h3>
+                        <button onclick="alert('Reminder set for Captain America: Brave New World!')">Set Reminder</button>
+                    </div>
+                </div>
+                <!-- Movie Item -->
+                <div class="movie-item">
+                    <img src="M2.jpg" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Thunderbolts* (2025)</h3>
+                        <button onclick="alert('Reminder set for Thunderbolts*!')">Set Reminder</button>
+                    </div>
+                </div>
+                <!-- Movie Item -->
+                <div class="movie-item">
+                    <img src="M3.jpeg" alt="Movie 3">
+                    <div class="movie-info">
+                        <h3>Mortal Kombat 2 (2025)</h3>
+                        <button onclick="alert('Reminder set for Mortal Kombat 2!')">Set Reminder</button>
+                    </div>
+                </div>
+                <!-- Movie Item -->
+                <div class="movie-item">
+                    <img src="M4.jpg" alt="Movie 3">
+                    <div class="movie-info">
+                        <h3>Jurassic World Rebirth (2025)</h3>
+                        <button onclick="alert('Reminder set for Jurassic World Rebirth!')">Set Reminder</button>
+                    </div>
+                </div>
+                <!-- Movie Item -->
+                <div class="movie-item">
+                    <img src="m5.jpg" alt="Movie 3">
+                    <div class="movie-info">
+                        <h3>Red One (this december)</h3>
+                        <button onclick="alert('Reminder set for Red One!')">Set Reminder</button>
+                    </div>
+                </div>
+                <!-- Movie Item -->
+                <div class="movie-item">
+                    <img src="m6.jpg" alt="Movie 3">
+                    <div class="movie-info">
+                        <h3>Superman (2025)</h3>
+                        <button onclick="alert('Reminder set for Superman!')">Set Reminder</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Slide 3 -->
-        <div class="slide">
-            <img src="ad3.jpg" alt="Slide 3">
-        </div>
-
-        <!-- Navigation Buttons -->
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-
-    <!-- Dots to indicate slides -->
-    <div class="dots-container">
-        <span class="dot" onclick="setSlide(1)"></span> 
-        <span class="dot" onclick="setSlide(2)"></span> 
-        <span class="dot" onclick="setSlide(3)"></span> 
-    </div>
-
-    <script>
-        let currentSlideIndex = 1;
-        showSlide(currentSlideIndex);
-
-        // Function to change slide
-        function changeSlide(n) {
-            showSlide(currentSlideIndex += n);
-        }
-
-        // Function to set a specific slide
-        function setSlide(n) {
-            showSlide(currentSlideIndex = n);
-        }
-
-        // Function to display the current slide
-        function showSlide(n) {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            
-            // Wrap around if index is out of bounds
-            if (n > slides.length) { currentSlideIndex = 1 }
-            if (n < 1) { currentSlideIndex = slides.length }
-
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            // Remove active class from all dots
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            // Display the current slide and activate corresponding dot
-            slides[currentSlideIndex - 1].style.display = "block";
-            dots[currentSlideIndex - 1].className += " active";
-        }
-    </script>
-
-
-
 
     <!-- Footer -->
     <footer>
@@ -424,3 +354,20 @@
     </footer>
 </body>
 </html>
+
+<!--
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        
+         <form action="TestConnection" method="get">
+        <input type="submit" value="Test Database Connection">
+    </form>
+    </body>
+</html>
+-->
