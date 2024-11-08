@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
+<%@ page import="java.util.List" %>
+
+<!<!--  --> <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -393,6 +395,54 @@ footer a:hover {
             <!-- Add more movie items as needed -->
         </div>
     </div>
+    
+    
+    
+    
+    
+    <div class="main-content">
+        <h1>NOW SHOWING</h1>
+        <div class="movie-grid">
+            <c:forEach var="movie" items="${movies}">
+                <div class="movie-item">
+                    <img src="${movie.posterPath}" alt="${movie.title}">
+                    <div class="movie-info">
+                        <h3>${movie.title}</h3>
+                        <p>${movie.status}</p><br>
+                        <div class="banner-buttons">
+                            <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
+                            <a href="${movie.trailerLink}" class="watch-trailer">WATCH TRAILER</a>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
+    
+    
+
+
+
+    
+
+
+    
+    
+        
+    <h2>Add a Movie</h2>
+    <form action="movieservlet" method="post">
+        <input type="text" name="title" placeholder="Movie Title" required />
+        <textarea name="description" placeholder="Movie Description" required></textarea>
+        <input type="number" name="duration" placeholder="Duration (min)" required />
+        <input type="number" name="rating" step="0.1" placeholder="Rating" required />
+        <input type="date" name="release_date" required />
+        <input type="text" name="genre" placeholder="Genre" required />
+        <input type="text" name="image_url" placeholder="Image URL" />
+        <input type="text" name="trailer_url" placeholder="Trailer URL" />
+        <button type="submit">Add Movie</button>
+    </form>
+
+    
         <!-- Footer -->
         <footer>
             <p>&copy; 2024 FILM HUB. All Rights Reserved.</p>
@@ -414,3 +464,4 @@ footer a:hover {
         </div>
 </body>
 </html>
+
