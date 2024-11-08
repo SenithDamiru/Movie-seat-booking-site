@@ -193,7 +193,7 @@
             <a href="advetise.jsp">ADVERTISE</a>
         </nav>
         <div class="header-actions">
-            <a href="Buy tickets.html" class="buy-tickets">BUY TICKETS</a>
+            <a href="Buy tickets.jsp" class="buy-tickets">BUY TICKETS</a>
             <a href="#">LOGIN</a>
         </div>
     </header>
