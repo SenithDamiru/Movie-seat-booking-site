@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking - Film Hall</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Movie Seat Booking</h1>
+        
+        <!-- Screen Display -->
+        <div class="screen">SCREEN</div>
+        
+        <!-- Lux Seating Layout -->
+        <div class="lux-section">
+            <h2>Lux Seats</h2>
+            <div class="seat-layout">
+                <!-- Lux Seat Rows -->
+                <div class="row">
+                    <div class="seat lux" data-seat="1">L1</div>
+                    <div class="seat lux" data-seat="2">L2</div>
+                    <div class="seat lux" data-seat="3">L3</div>
+                    <div class="seat lux" data-seat="4">L4</div>
+                    <div class="seat lux" data-seat="5">L5</div>
+                    <div class="seat lux" data-seat="6">L6</div>
+                </div>
+                <div class="row">
+                    <div class="seat lux" data-seat="7">L7</div>
+                    <div class="seat lux" data-seat="8">L8</div>
+                    <div class="seat lux" data-seat="9">L9</div>
+                    <div class="seat lux" data-seat="10">L10</div>
+                    <div class="seat lux" data-seat="11">L11</div>
+                    <div class="seat lux" data-seat="12">L12</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Superior Seating Layout -->
+        <div class="superior-section">
+            <h2>Superior Seats</h2>
+            <div class="seat-layout">
+                <!-- Superior Seat Rows -->
+                <div class="row">
+                    <div class="seat superior" data-seat="13">S13</div>
+                    <div class="seat superior" data-seat="14">S14</div>
+                    <div class="seat superior" data-seat="15">S15</div>
+                    <div class="seat superior" data-seat="16">S16</div>
+                    <div class="seat superior" data-seat="17">S17</div>
+                    <div class="seat superior" data-seat="18">S18</div>
+                </div>
+                <div class="row">
+                    <div class="seat superior" data-seat="19">S19</div>
+                    <div class="seat superior" data-seat="20">S20</div>
+                    <div class="seat superior" data-seat="21">S21</div>
+                    <div class="seat superior" data-seat="22">S22</div>
+                    <div class="seat superior" data-seat="23">S23</div>
+                    <div class="seat superior" data-seat="24">S24</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="available">Available</div>
+            <div class="selected">Selected</div>
+        </div>
+
+        <!-- Book Button -->
+        <button class="book-button">Book Seats</button>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+</html>
