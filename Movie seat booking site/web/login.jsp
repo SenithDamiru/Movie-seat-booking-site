@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <span class="film">Film</span><span class="hub">Hub</span>
         </div>
         <h1>Login to Film Hub</h1>
-        <form action="loginServlet" method="POST">
+        <form action="LoginServlet" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             

@@ -1,11 +1,11 @@
-
-
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,10 +17,7 @@ import newpackage.users;
  *
  * @author senithdamiru
  */
-@WebServlet(urlPatterns = {"/RegisterServlet"})
-public class RegisterServlet extends HttpServlet {
-
-    private Object DatabseConnection;
+public class LoginServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,33 +36,24 @@ public class RegisterServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RegisterServlet</title>");
+            out.println("<title>Servlet LoginServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet RegisterServlet at " + request.getContextPath() + "</h1>");
             
-            //fetch data 
-            String username = request.getParameter("username");
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            String first_name = request.getParameter("first_name");
-            String last_name = request.getParameter("last_name");
+            String lUname = request.getParameter("username");
+            String lPass = request.getParameter("password");
             
-            users user = new users(username, email, password,first_name, last_name);
-            UserDatabase regUser;
-            regUser = new UserDatabase (DatabaseConnection.getConnection());
+            UserDatabase db = new UserDatabase(DatabaseConnection.getConnection());
+            users user = db.logUser(lUname, lPass);
             
-            if(regUser.saveUser(user)){
+            if(user!= null){
+                HttpSession session = request.getSession();
+                session.setAttribute("logUser", user);
                 response.sendRedirect("index.jsp");
-            }else{
-                String errorMessage = "User Available";
-                HttpSession regSession = request.getSession();
-                regSession.setAttribute("RegError",errorMessage);
-                response.sendRedirect("register.jsp");
             }
-           
-            
-            
+            else{
+                out.print("user not found");
+            }
             out.println("</body>");
             out.println("</html>");
         }

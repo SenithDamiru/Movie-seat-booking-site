@@ -4,6 +4,7 @@ package newpackage;
 
 
 public class users {
+    private int user_id;
     private String username;
     private String password;
     private String email;
@@ -17,6 +18,15 @@ public class users {
 
     
         // Constructor 
+      public users( int user_id, String username, String password, String email, String first_name, String last_name) { 
+        this.user_id = user_id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
+      
     public users( String username, String password, String email, String first_name, String last_name) { 
         this.username = username;
         this.password = password;
@@ -51,7 +61,10 @@ public class users {
     
     // Getters
    
-
+      public int getUser_id() {
+        return user_id;
+    }
+      
     public String getUsername() {
         return username;
     }
@@ -73,7 +86,10 @@ public class users {
     }
 
     // Setters
-   
+       public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+       
 
     public void setUsername(String username) {
         this.username = username;
@@ -87,11 +103,11 @@ public class users {
         this.email = email;
     }
 
-    public void setFirstName(String firstName) {
-        this.first_name = firstName;
+    public void setFirstName(String first_name) {
+        this.first_name = first_name;
     }
 
-    public void setLastName(String lastName) {
-        this.last_name = lastName;
+    public void setLastName(String last_name) {
+        this.last_name = last_name;
     }
 }
