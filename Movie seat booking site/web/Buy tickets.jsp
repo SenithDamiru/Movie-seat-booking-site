@@ -196,7 +196,7 @@
                     <div class="showtime" onclick="selectShowtime(this)">10:45 AM</div>
                     <div class="showtime" onclick="selectShowtime(this)">01:00 PM</div>
                     <div class="showtime" onclick="selectShowtime(this)">06:30 PM</div>
-                    <a href="seats.html" class="select-seat">BOOK</a>
+                    <a href="Seatbooking.jsp" class="select-seat">BOOK</a>
                 </div>
                 <br>
 <h2 class="movie-title">VENOM: THE LAST DANCE</h2>
@@ -204,14 +204,14 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">04:15 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">07:30 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="Seatbooking.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">10:45 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">02:30 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">06:00 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="Seatbooking.jsp" class="select-seat">BOOK</a>
 </div>
 <br>
 <h2 class="movie-title">JOURNEY TO MARS</h2>
