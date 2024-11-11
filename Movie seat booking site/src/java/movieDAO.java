@@ -1,5 +1,6 @@
 
 
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class movieDAO {
 
     // Database connection method
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+        return (Connection) DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
     }
 
     // Method to add a new movie

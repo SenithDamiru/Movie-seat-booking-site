@@ -1,3 +1,4 @@
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ public class movieD {
 
     private Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        return DriverManager.getConnection(URL, USER, PASSWORD);
+        return (Connection) DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
     public List<moviemodel> getAllMovies() throws SQLException, ClassNotFoundException {

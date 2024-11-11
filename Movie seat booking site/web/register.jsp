@@ -26,7 +26,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <span class="film">Film</span><span class="hub">Hub</span>
         </div>
         <h1>Register And Book Your Seat NOW</h1>
-        <form action="registerServlet" method="POST">
+        <form action="RegisterServlet" method="POST">
+            
+             <label for="username">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            
+                <label for="username">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             
@@ -36,12 +43,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
             
             <button type="submit" class="btn">Register</button>
         </form>
-        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <p>Already have an account? <a href="login.jsp">Login here</a></p>
     </div>
 </body>
 </html>
