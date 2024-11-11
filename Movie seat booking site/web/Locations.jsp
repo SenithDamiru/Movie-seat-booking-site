@@ -195,7 +195,7 @@ footer a:hover {
         </nav>
         <div class="header-actions">
             <a href="Buy tickets.jsp" class="buy-tickets">BUY TICKETS</a>
-            <a href="#">LOGIN</a>
+            <a href="login.jsp">LOGIN</a>
         </div>
     </header>
 
