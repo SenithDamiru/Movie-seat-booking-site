@@ -48,14 +48,14 @@ public class RegisterServlet extends HttpServlet {
             String username = request.getParameter("username");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
-            String firstname = request.getParameter("firstname");
-            String lastname = request.getParameter("lastname");
+            String first_name = request.getParameter("firs_tname");
+            String last_name = request.getParameter("last_name");
             
-            users userModel = new users(username, email, password,firstname, lastname);
+            users user = new users(username, email, password,first_name, last_name);
             UserDatabase regUser;
             regUser = new UserDatabase (DatabaseConnection.getConnection());
             
-            if(regUser.saveUser(userModel)){
+            if(regUser.saveUser(user)){
                 response.sendRedirect("index.jsp");
             }else{
                 String errorMessage = "User Available";

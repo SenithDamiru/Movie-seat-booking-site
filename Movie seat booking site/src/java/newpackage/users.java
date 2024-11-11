@@ -4,12 +4,11 @@ package newpackage;
 
 
 public class users {
-    private int userId;
     private String username;
     private String password;
     private String email;
-    private String firstName;
-    private String lastName;
+    private String first_name;
+    private String last_name;
 
 
 
@@ -17,47 +16,41 @@ public class users {
     public users() {}
 
     
-        // Constructor
-    public users(int userId, String username, String password, String email, String firstName, String lastName) {
-        this.userId = userId;
+        // Constructor 
+    public users( String username, String password, String email, String first_name, String last_name) { 
         this.username = username;
         this.password = password;
         this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
     
-    public users( String username, String password, String email, String firstName, String lastName) { 
-        this.username = username;
+    public users(String password, String email, String first_name, String last_name) { 
+        
         this.password = password;
         this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
-    
-     public users(  String password, String email, String firstName, String lastName) {
-        this.password = password;
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+ 
      
-      public users(  String email, String firstName, String lastName) { 
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+    public users( String email, String first_name, String last_name) { 
+        
       
-       public users(   String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.email = email;
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
     
+    
+     public users(  String first_name, String last_name) { 
+  
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
     
     // Getters
-    public int getUserId() {
-        return userId;
-    }
+   
 
     public String getUsername() {
         return username;
@@ -72,17 +65,15 @@ public class users {
     }
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
 
     public String getLastName() {
-        return lastName;
+        return last_name;
     }
 
     // Setters
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
+   
 
     public void setUsername(String username) {
         this.username = username;
@@ -97,10 +88,10 @@ public class users {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.first_name = firstName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.last_name = lastName;
     }
 }

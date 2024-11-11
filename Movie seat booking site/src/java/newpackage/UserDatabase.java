@@ -16,7 +16,7 @@ public class UserDatabase {
     public boolean saveUser(users user){
         boolean set = false;
         try{
-            String query = "insert into users(username, password, email, first_name, last_name) values(?,?,?,?,?,?)";
+            String query = "insert into users(username, password, email, first_name, last_name) values(?,?,?,?,?)";
             
             PreparedStatement pt = this.con.prepareStatement(query);
             pt.setString(1, user.getUsername());

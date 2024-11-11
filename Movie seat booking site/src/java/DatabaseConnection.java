@@ -6,7 +6,6 @@ public class DatabaseConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/movie_booking?useSSL=false&serverTimezone=UTC"; 
     private static final String USERNAME = "root"; 
     private static final String PASSWORD = "SLTechieBoy@2005"; 
-    static Connection getConnection;
 
     // Method to establish a connection to the database
     public static Connection getConnection() {

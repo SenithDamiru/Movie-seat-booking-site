@@ -29,10 +29,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <form action="RegisterServlet" method="POST">
             
              <label for="username">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required>
+            <input type="text" id="first_name" name="first_name" required>
             
                 <label for="username">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required>
+            <input type="text" id="last_name" name="last_name" required>
             
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
