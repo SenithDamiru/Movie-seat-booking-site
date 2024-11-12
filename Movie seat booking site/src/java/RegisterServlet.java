@@ -57,12 +57,12 @@ public class RegisterServlet extends HttpServlet {
             regUser = new UserDatabase (DatabaseConnection.getConnection());
             
             if(regUser.saveUser(user)){
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("thank.html");
             }else{
                 String errorMessage = "User Available";
                 HttpSession regSession = request.getSession();
                 regSession.setAttribute("RegError",errorMessage);
-                response.sendRedirect("register.jsp");
+                response.sendRedirect("unavailable.html");
             }
            
             
