@@ -254,6 +254,7 @@
             <a href="Locations.jsp">LOCATIONS</a>
             <a href="Meals.jsp">MEALS AND BEVERAGES</a>
             <a href="advetise.jsp">ADVERTISE</a>
+            <a href="admin.jsp">Admin Panel</a>
         </nav>
         <div class="header-actions">
             <a href="Buy tickets.jsp" class="buy-tickets">BUY TICKETS</a>
