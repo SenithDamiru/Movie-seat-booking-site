@@ -1,6 +1,9 @@
 
 package newpackage;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.sql.Date;
 
 public class moviesDAO {
     Connection con;
@@ -35,4 +38,39 @@ public class moviesDAO {
         }
         return test;
     }
+    
+    // retrieve movie data from db
+    
+    public List<movies> getAllMovies(){
+        List<movies> movie = new ArrayList<>();
+        
+        try{
+            String query = "select * from movies";
+            PreparedStatement pt = this.con.prepareStatement(query);
+            
+            ResultSet rs = pt.executeQuery();
+            
+            while(rs.next()){
+                int movie_id = rs.getInt("movie_id");
+                String title = rs.getString("title");
+                String description = rs.getString("description");
+                int duration = rs.getInt("duration");
+                double rating = rs.getDouble("rating");
+                Date release_date = rs.getDate("release_date");
+                String genre = rs.getString("genre");
+                String imageURL = rs.getString("imageURL");
+                String trailerURL = rs.getString("trailerURL");
+                
+                movies row = new movies(movie_id, title,  description, duration,  rating,  release_date,  genre,  imageURL, trailerURL);
+                movie.add(row);
+                
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return  movie;
+    }
+    
+    
 }

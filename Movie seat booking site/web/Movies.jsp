@@ -1,7 +1,22 @@
+<%@page import="newpackage.DatabaseConnection"%>
+<%@page import="newpackage.movies"%>
+
+
+
+
+
+<%@ page import="java.sql.Date" %>
+<%@page import="newpackage.moviesDAO"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
+<%@taglib uri= "http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<% 
+    moviesDAO movieData = new moviesDAO(DatabaseConnection.getConnection());
+    List<movies> movie = movieData.getAllMovies();
+    request.setAttribute("MOVIES_LIST",movie);
+%>
 
-<!<!--  --> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -273,175 +288,61 @@ footer a:hover {
     <div class="main-content">
         <h1>NOW SHOWING</h1>
         <div class="movie-grid">
-            <!-- Movie Item -->
+   <!-- Add more movie items as needed -->
+             <c:forEach var= "tempMovie" items="${MOVIES_LIST}">
             <div class="movie-item">
-                <img src="m7.jpg" alt="Venom: The Last Dance">
+                <img src="${tempMovie.imageURL}"> 
                 <div class="movie-info">
-                    <h3>VENOM: THE LAST DANCE</h3>
+                    <h3>${tempMovie.title}</h3>
                     <p>NOW SCREENING</p><br>
                     <div class="banner-buttons">
                         <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=__2bjWbetsA" class="watch-trailer">WATCH TRAILER</a>
+                        <a href="${tempMovie.trailerURL}" class="watch-trailer">WATCH TRAILER</a>
                     </div>
                 </div>
             </div>
-            <!-- Movie Item -->
-            <div class="movie-item">
-                <img src="m8.jpeg" alt="The Wild Robot">
-                <div class="movie-info">
-                    <h3>THE WILD ROBOT</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=67vbA5ZJdKQ" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Movie Item -->
-            <div class="movie-item">
-                <img src="m9.jpg" alt="Smile 2">
-                <div class="movie-info">
-                    <h3>SMILE 2</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=Fy7kaI3GKzo" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Movie Item -->
-            <div class="movie-item">
-                <img src="m10.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>BHOOL BHULAIYAA </h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=P2KRKxAb2ek" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed -->
-            <div class="movie-item">
-                <img src="m11.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>BHOOL BHULAIYAA 3</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?app=desktop&v=sp3Io6rcA8E" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed -->
-            <div class="movie-item">
-                <img src="m12.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>IT END WITH US</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=DLET_u31M4M" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed --><div class="movie-item">
-                <img src="m13.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>BlOODY BEGGER</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=7YpB7suzrto" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed -->
-            <div class="movie-item">
-                <img src="m14.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>DESPICABLE ME 4</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=qQlr9-rF32A" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed -->
-            <div class="movie-item">
-                <img src="M15.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>WICKED</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=6COmYeLsz4c" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed -->
-            <div class="movie-item">
-                <img src="M16.jpg" alt="Bhool Bhulaiyaa 3">
-                <div class="movie-info">
-                    <h3>HOUSE OF SPOILS</h3>
-                    <p>NOW SCREENING</p><br>
-                    <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        <a href="https://www.youtube.com/watch?v=qPtxADbsUzk" class="watch-trailer">WATCH TRAILER</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more movie items as needed -->
+              </c:forEach>
+           
+   
+   
+   
+   
         </div>
     </div>
-    
-    
-    
-    
-    
-    <div class="main-content">
-        <h1>NOW SHOWING</h1>
-        <div class="movie-grid">
-            <c:forEach var="movie" items="${movies}">
-                <div class="movie-item">
-                    <img src="${movie.posterPath}" alt="${movie.title}">
-                    <div class="movie-info">
-                        <h3>${movie.title}</h3>
-                        <p>${movie.status}</p><br>
-                        <div class="banner-buttons">
-                            <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
-                            <a href="${movie.trailerLink}" class="watch-trailer">WATCH TRAILER</a>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-        </div>
-    </div>
-    
-    
-
-
-
-    
-
-
-    
     
         
-    <h2>Add a Movie</h2>
-    <form action="movieservlet" method="post">
-        <input type="text" name="title" placeholder="Movie Title" required />
-        <textarea name="description" placeholder="Movie Description" required></textarea>
-        <input type="number" name="duration" placeholder="Duration (min)" required />
-        <input type="number" name="rating" step="0.1" placeholder="Rating" required />
-        <input type="date" name="release_date" required />
-        <input type="text" name="genre" placeholder="Genre" required />
-        <input type="text" name="image_url" placeholder="Image URL" />
-        <input type="text" name="trailer_url" placeholder="Trailer URL" />
-        <button type="submit">Add Movie</button>
-    </form>
+ <table border="1" cellspacing="1" cellpadding="1">
+                <thead>
+                    <tr>
+                        <th>title</th>
+                        <th>description</th>
+                        <th>duration</th>
+                        <th>rating</th>
+                        <th>release_date</th>
+                        <th>genre</th>
+                        <th>imageURL</th>
+                        <th>trailerURL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach var= "tempMovie" items="${MOVIES_LIST}">
+                    <tr>
+                        <td>${tempMovie.title}</td>
+                        <td>${tempMovie.description}</td>
+                        <td>${tempMovie.duration}</td>
+                        <td>${tempMovie.rating}</td>
+                        <td>${tempMovie.release_date}</td>
+                        <td>${tempMovie.genre}</td>
+                        <td>${tempMovie.imageURL}</td>
+                        <td>${tempMovie.trailerURL}</td>
+                    </tr>
+                    </c:forEach>
+                    
+                 
+                </tbody>
+            </table>
 
+            
     
         <!-- Footer -->
         <footer>

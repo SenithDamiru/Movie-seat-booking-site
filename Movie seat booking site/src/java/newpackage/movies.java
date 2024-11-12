@@ -40,6 +40,27 @@ public class movies {
         this.trailerURL = trailerURL;
     }
 
+    public Date getRelease_date() {
+        return release_date;
+    }
+
+    public String getTrailerURL() {
+        return trailerURL;
+    }
+
+    public void setRelease_date(Date release_date) {
+        this.release_date = release_date;
+    }
+
+    public void setTrailerURL(String trailerURL) {
+        this.trailerURL = trailerURL;
+    }
+
+    public movies(Date release_date, String trailerURL) {
+        this.release_date = release_date;
+        this.trailerURL = trailerURL;
+    }
+
     public int getMovie_id() {
         return movie_id;
     }
@@ -114,7 +135,7 @@ public class movies {
 
     @Override
     public String toString() {
-        return "movies{" + "movie_id=" + movie_id + ", title=" + title + ", description=" + description + ", duration=" + duration + ", rating=" + rating + ", release_date=" + release_date + ", genre=" + genre + ", imageURL=" + imageURL + ", trailorURL=" + trailerURL + '}';
+        return "movies{" + "movie_id=" + movie_id + ", title=" + title + ", description=" + description + ", duration=" + duration + ", rating=" + rating + ", release_date=" + release_date + ", genre=" + genre + ", imageURL=" + imageURL + ", trailerURL=" + trailerURL + '}';
     }
     
     
