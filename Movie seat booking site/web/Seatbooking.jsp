@@ -28,7 +28,10 @@
     <h1>AMARAN</h1>
     <p><b>FilmHub</b> &bull; 10 Nov 24, <b>Showtime:</b>10:00 PM</p>
   </div>
-  <img _ngcontent-vog-c126="" class="m-background ng-star-inserted" style="height: 200px;width: 1000px;" src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00028575.jpg">
+ 
+    
+    
+    <img _ngcontent-vog-c126="" class="m-background ng-star-inserted" style="height: 200px;width: 1000px;" src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/big/1460x600/HO00028575.jpg">
   <div class="screen">SCREEN THIS WAY</div>
 
   <div class="seats-container">

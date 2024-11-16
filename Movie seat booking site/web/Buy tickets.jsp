@@ -188,7 +188,7 @@
                     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
                     <div class="showtime" onclick="selectShowtime(this)">04:15 PM</div>
                     <div class="showtime" onclick="selectShowtime(this)">07:00 PM</div>
-                    <a href="seats.html" class="select-seat">BOOK</a>
+                    <a href="Seatbooking.jsp" class="select-seat">BOOK</a>
                 </div>
 
                 <div class="theater">

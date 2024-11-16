@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILM HUB - Movies</title>
     <link rel="icon" href="logo.png" type="image/x-icon">
+     <link rel="stylesheet" href="moviestyle.css">
     <style>
         /* General Reset */
         * {
@@ -290,17 +291,27 @@ footer a:hover {
         <div class="movie-grid">
    <!-- Add more movie items as needed -->
              <c:forEach var= "tempMovie" items="${MOVIES_LIST}">
-            <div class="movie-item">
+                 <div> 
+                     <div class="movie-item">
                 <img src="${tempMovie.imageURL}"> 
                 <div class="movie-info">
                     <h3>${tempMovie.title}</h3>
                     <p>NOW SCREENING</p><br>
                     <div class="banner-buttons">
-                        <a href="Buy tickets.html" class="buy-ticket">BUY TICKETS ONLINE</a>
+                        <a href="Buy tickets.jsp" class="buy-ticket">BUY TICKETS ONLINE</a>
+                        
+                        
                         <a href="${tempMovie.trailerURL}" class="watch-trailer">WATCH TRAILER</a>
+                        
+                        
                     </div>
                 </div>
+                     </div>      
+                        <br>
+                        <a href="editmovie.jsp" class="popup-button">Edit</a> <br> 
+                        <a href="deletemovie.jsp" class="popup-button">Delete</a>
             </div>
+                        
               </c:forEach>
            
    
@@ -310,22 +321,45 @@ footer a:hover {
         </div>
     </div>
     
+    
+    
+ <c:forEach var="tempMovie" items="${MOVIES_LIST}">
+    <div class="film-card">
+        <div class="film-image-container">
+            <img src="${tempMovie.imageURL}" alt="${tempMovie.title}">
+            <div class="popup-overlay">
+                <div class="popup-details">
+                    <h2>${tempMovie.title}</h2>
+                    <p><strong>${tempMovie.release_date}</strong>, Directed by </p>
+                    <p>${tempMovie.duration} min</p>
+                    <p><strong>Genres:</strong> ${tempMovie.genre}</p>
+                    <p>${tempMovie.description}</p>
+                    <div class="popup-buttons">
+                        <a href="BuyTickets.jsp" class="popup-button">BUY TICKETS</a>
+                        <a href="${tempMovie.trailerURL}" class="popup-button">WATCH TRAILER</a>
+                    </div>
+                </div>
+                     <a href="BuyTickets.jsp" class="popup-button">BUY TICKETS</a>
+            </div>
+        </div>
+    </div>
+</c:forEach>
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
  <table border="1" cellspacing="1" cellpadding="1">
-                <thead>
-                    
-                    
-                    <tr>
-                        <th>title</th>
-                        <th>description</th>
-                        <th>duration</th>
-                        <th>rating</th>
-                        <th>release_date</th>
-                        <th>genre</th>
-                        <th>imageURL</th>
-                        <th>trailerURL</th>
-                    </tr>
-                </thead>
+               
                 <tbody>
                     <c:forEach var= "tempMovie" items="${MOVIES_LIST}">
                     <tr>

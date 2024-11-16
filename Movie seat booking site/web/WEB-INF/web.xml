@@ -12,6 +12,10 @@
         <servlet-name>addmovieservlet</servlet-name>
         <servlet-class>addmovieservlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditBookServlet</servlet-name>
+        <servlet-class>EditBookServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>addmovieservlet</servlet-name>
         <url-pattern>/addmovieservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditBookServlet</servlet-name>
+        <url-pattern>/EditBookServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

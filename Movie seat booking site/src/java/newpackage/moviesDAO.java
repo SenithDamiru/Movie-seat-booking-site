@@ -72,5 +72,68 @@ public class moviesDAO {
         return  movie;
     }
     
+    //get single movie method
+    public movies getSingleMovie(int movie_id){
+        
+        movies mv = null;
+        
+        try{
+            String query = "select * from movies where movie_id =?";
+            PreparedStatement pt = this.con.prepareStatement(query);
+            pt.setInt(8, movie_id);
+            ResultSet rs = pt.executeQuery();
+            
+            while(rs.next()){
+                int mid = rs.getInt("movie_id");
+                String Title = rs.getString("title");
+                String Description = rs.getString("description");
+                int Duration = rs.getInt("duration");
+                double Rating = rs.getDouble("rating");
+                Date Release_date = rs.getDate("release_date");
+                String Genre = rs.getString("genre");
+                String ImageURL = rs.getString("imageURL");
+                String TrailerURL = rs.getString("trailerURL");
+                
+                mv = new movies(mid, Title,  Description, Duration,  Rating,  Release_date,  Genre,  ImageURL, TrailerURL);
+            }
+            
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return mv;
+    }
+    
+    
+    
+    //edit book information
+
+public boolean editMovieInfo(movies movie){
+    boolean test = false;
+    try{
+        String query = "update movies set title=?, description=?, duration=?, rating=?, release_date=?, genre=?, imageURL=?,trailerURL=? where movie_id=? ";
+        PreparedStatement pt = this.con.prepareStatement(query);
+         pt.setString(1, movie.getTitle());
+         pt.setString(2, movie.getDescription());
+         pt.setInt(3, movie.getDuration());
+         pt.setDouble(4, movie.getRating());
+         pt.setDate(5, movie.getReleaseDate());
+         pt.setString(6, movie.getGenre());
+         pt.setString(7, movie.getImageURL());
+         pt.setString(8, movie.getTrailorURL());
+         pt.setInt(9, movie.getMovie_id());
+         
+         pt.executeUpdate();
+         test = true;
+        
+    }catch(Exception e){
+        e.printStackTrace();
+    }
+    return test;
+}
+    
+    
     
 }
+
