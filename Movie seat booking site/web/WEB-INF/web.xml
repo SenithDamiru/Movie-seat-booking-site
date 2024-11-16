@@ -16,6 +16,18 @@
         <servlet-name>EditBookServlet</servlet-name>
         <servlet-class>EditBookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FetchMovieServlet</servlet-name>
+        <servlet-class>FetchMovieServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditMovieServlet</servlet-name>
+        <servlet-class>EditMovieServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteMovieServlet</servlet-name>
+        <servlet-class>DeleteMovieServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -31,6 +43,18 @@
     <servlet-mapping>
         <servlet-name>EditBookServlet</servlet-name>
         <url-pattern>/EditBookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FetchMovieServlet</servlet-name>
+        <url-pattern>/FetchMovieServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditMovieServlet</servlet-name>
+        <url-pattern>/EditMovieServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteMovieServlet</servlet-name>
+        <url-pattern>/DeleteMovieServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

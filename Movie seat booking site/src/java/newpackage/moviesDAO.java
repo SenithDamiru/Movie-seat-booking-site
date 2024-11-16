@@ -11,6 +11,8 @@ public class moviesDAO {
     public moviesDAO(Connection con) {
         this.con = con;
     }
+
+    
     
     // add movie
     public boolean addMovie(movies movie){
@@ -72,7 +74,7 @@ public class moviesDAO {
         return  movie;
     }
     
-    //get single movie method
+ /*   //get single movie method
     public movies getSingleMovie(int movie_id){
         
         movies mv = null;
@@ -105,7 +107,7 @@ public class moviesDAO {
         return mv;
     }
     
-    
+    */
     
     //edit book information
 
@@ -133,6 +135,75 @@ public boolean editMovieInfo(movies movie){
     return test;
 }
     
+
+//chatgpt
+public movies getMovieById(int movie_id) {
+    
+    movies movie = null;
+
+    try {
+        String query = "SELECT * FROM movies WHERE movie_id = ?";
+    PreparedStatement stmt = this.con.prepareStatement(query);
+          
+        // Set the parameter in the query
+        stmt.setInt(1, movie_id);
+
+        // Execute the query
+        ResultSet rs = stmt.executeQuery();
+
+        // Check if a result exists
+        if (rs.next()) {
+            // Create a Movie object using the result data
+            movie = new movies(
+                rs.getInt("movie_id"),
+                rs.getString("title"),
+                rs.getString("description"),
+                rs.getInt("duration"),
+                rs.getDouble("rating"),
+                rs.getDate("release_date"),
+                rs.getString("genre"),
+                rs.getString("imageURL"),
+                rs.getString("trailerURL")
+            );
+        } else {
+            System.out.println("No movie found with ID: " + movie_id);
+        }
+
+    } catch (SQLException e) {
+        // Log the exception for debugging
+        System.err.println("Error fetching movie by ID: " + e.getMessage());
+        e.printStackTrace();
+    } catch (Exception e) {
+        System.err.println("Unexpected error: " + e.getMessage());
+        e.printStackTrace();
+    }
+
+    return movie; // Return null if no movie is found
+}
+
+
+
+ // Method to delete a movie by its ID
+    public boolean deleteMovie(int movie_id) {
+        boolean isDeleted = false;
+        try {
+            String query = "DELETE FROM movies WHERE movie_id = ?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, movie_id);
+
+            // Execute the delete operation
+            int rowsAffected = pst.executeUpdate();
+
+            // If rowsAffected > 0, the movie was deleted successfully
+            if (rowsAffected > 0) {
+                isDeleted = true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isDeleted;
+    }
+
     
     
 }

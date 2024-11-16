@@ -42,6 +42,7 @@
 
 /* Details inside overlay */
 .popup-details {
+    
     max-width: 60%; /* Adjust width to position the content to the left side */
 }
 

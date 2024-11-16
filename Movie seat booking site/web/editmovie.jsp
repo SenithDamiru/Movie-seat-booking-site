@@ -34,7 +34,7 @@
             <h2>Edit Movies</h2>
             
             
-            <form method="POST" action="EditBookServlet">
+            <form method="POST" action="EditMovieServlet">
                 <input type="int" name="movie_id" placeholder="movie_id" value="${editMovie.movie_id}" required>
                 
                 <input type="text" name="title" placeholder="Title" value="${editMovie.title}" required>

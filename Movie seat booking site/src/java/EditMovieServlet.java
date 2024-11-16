@@ -5,9 +5,11 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.Date;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +22,7 @@ import newpackage.moviesDAO;
  *
  * @author senithdamiru
  */
-public class EditBookServlet extends HttpServlet {
+public class EditMovieServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,55 +41,10 @@ public class EditBookServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet EditBookServlet</title>");
+            out.println("<title>Servlet EditMovieServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            
-            //fetch data from the edit form
-            int movie_id = Integer.parseInt(request.getParameter("movie_id"));
-            String title = request.getParameter("title");
-            String description = request.getParameter("description");
-            int duration = Integer.parseInt(request.getParameter("duration"));
-            double rating = Double.parseDouble(request.getParameter("rating"));
-            
-            String genre = request.getParameter("genre");
-            String imageURL = request.getParameter("imageURL");
-            String trailerURL = request.getParameter("trailerURL");
-            
-
-try {
-    String dateString = request.getParameter("release_date");
-    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd"); // Adjust the pattern to match your date format
-    Date release_date = (Date) format.parse(dateString);
-    movies movie = new movies();
-     movie.setReleaseDate(release_date);
-    
-} catch (Exception e) {
-    e.printStackTrace();
-    // Handle the error
-}
-
-
-        movies movie = new movies();
-        movie.setTitle(title);
-        movie.setDescription(description);
-        movie.setDuration(duration);
-        movie.setGenre(genre);
-       
-        movie.setRating(rating);
-        movie.setImageURL(imageURL);
-        movie.setTrailerURL(trailerURL);
-        movie.setMovie_id(movie_id);
-        
-        moviesDAO mvdao = new moviesDAO(DatabaseConnection.getConnection());
-        boolean success = mvdao.editMovieInfo(movie);
-        if(success){
-            out.println("edited successfully");
-        }else{
-            out.println("something wrong");
-        }
-            
-            
+            out.println("<h1>Servlet EditMovieServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -117,10 +74,50 @@ try {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+    Connection con = null;
+    try {
+        con = DatabaseConnection.getConnection();  // Get the database connection
+
+        // Parse the form data
+        int movie_id = Integer.parseInt(request.getParameter("movie_id"));
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        int duration = Integer.parseInt(request.getParameter("duration"));
+        double rating = Double.parseDouble(request.getParameter("rating"));
+        String genre = request.getParameter("genre");
+        String imageURL = request.getParameter("imageURL");
+        String trailerURL = request.getParameter("trailerURL");
+
+        // Parse the release date (string from form to java.util.Date)
+        String releaseDateStr = request.getParameter("release_date");
+        java.util.Date releaseDateUtil = new SimpleDateFormat("yyyy-MM-dd").parse(releaseDateStr);
+
+        // Convert java.util.Date to java.sql.Date (necessary for SQL operations)
+        java.sql.Date releaseDateSql = new java.sql.Date(releaseDateUtil.getTime());
+
+        // Create the movie object
+        movies movie = new movies(movie_id, title, description, duration, rating, releaseDateSql, genre, imageURL, trailerURL);
+
+        // Instantiate moviesDAO with the connection
+        moviesDAO moviesDAO = new moviesDAO(con);
+
+        // Update the movie in the database
+        boolean isUpdated = moviesDAO.editMovieInfo(movie);
+
+        if (isUpdated) {
+            response.sendRedirect("Movies.jsp");  // If update is successful, redirect to Movies.jsp
+        } else {
+            response.sendRedirect("error.jsp");  // If update fails, redirect to an error page
+        }
+    } catch (Exception e) {
+        Logger.getLogger(EditMovieServlet.class.getName()).log(Level.SEVERE, null, e);
+        response.sendRedirect("error.jsp");  // If an exception occurs, redirect to error.jsp
     }
+}
+
 
     /**
      * Returns a short description of the servlet.

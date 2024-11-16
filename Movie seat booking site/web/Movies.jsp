@@ -308,8 +308,18 @@ footer a:hover {
                 </div>
                      </div>      
                         <br>
-                        <a href="editmovie.jsp" class="popup-button">Edit</a> <br> 
-                        <a href="deletemovie.jsp" class="popup-button">Delete</a>
+                    <p><strong>Released Date:</strong>${tempMovie.release_date}</strong> </p><br>
+                    <p><strong>IMDB Rating:</strong>${tempMovie.rating}</p><br>
+                    <p><strong>Duration:</strong>${tempMovie.duration} min</p><br>
+                    <p><strong>Genres:</strong> ${tempMovie.genre}</p><br>
+                    <p>${tempMovie.description}</p><br>
+                        
+                        
+                        
+                        <a href="testedit.jsp?movie_id=${tempMovie.movie_id}" class="popup-button">Edit</a> <br> <br>
+                        <!-- Update Delete button to call DeleteMovieServlet -->
+<a href="DeleteMovieServlet?movie_id=${tempMovie.movie_id}" class="popup-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</a>
+
             </div>
                         
               </c:forEach>
@@ -330,19 +340,30 @@ footer a:hover {
             <div class="popup-overlay">
                 <div class="popup-details">
                     <h2>${tempMovie.title}</h2>
-                    <p><strong>${tempMovie.release_date}</strong>, Directed by </p>
-                    <p>${tempMovie.duration} min</p>
+                      <p><strong>Released Date:</strong>${tempMovie.release_date}</strong> </p>
+                    <p><strong>IMDB Rating:</strong>${tempMovie.rating}</p>
+                    <p><strong>Duration:</strong>${tempMovie.duration} min</p>
                     <p><strong>Genres:</strong> ${tempMovie.genre}</p>
                     <p>${tempMovie.description}</p>
+                        
+                        
+                    
                     <div class="popup-buttons">
-                        <a href="BuyTickets.jsp" class="popup-button">BUY TICKETS</a>
+                        <a href="BuyTickets.jsp" class="popup-button">BUY TICKETS</a><br> <br>
                         <a href="${tempMovie.trailerURL}" class="popup-button">WATCH TRAILER</a>
                     </div>
                 </div>
-                     <a href="BuyTickets.jsp" class="popup-button">BUY TICKETS</a>
+                      
             </div>
+                     
         </div>
+                    
+                    <a href="testedit.jsp?movie_id=${tempMovie.movie_id}" class="popup-button">Edit</a> <br> <br>
+                        <!-- Update Delete button to call DeleteMovieServlet -->
+<a href="DeleteMovieServlet?movie_id=${tempMovie.movie_id}" class="popup-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</a>
+
     </div>
+                      
 </c:forEach>
 
 
