@@ -245,6 +245,7 @@ footer a:hover {
             display: inline-block;
             padding: 5px 10px;
             margin-right: 10px;
+            margin-top: 5px;
             border-radius: 4px;
             font-size: 14px;
             text-decoration: none;
@@ -299,7 +300,7 @@ footer a:hover {
                     <p>NOW SCREENING</p><br>
                     <div class="banner-buttons">
                         <a href="Buy tickets.jsp" class="buy-ticket">BUY TICKETS ONLINE</a>
-                        
+                        <br> 
                         
                         <a href="${tempMovie.trailerURL}" class="watch-trailer">WATCH TRAILER</a>
                         
@@ -308,15 +309,15 @@ footer a:hover {
                 </div>
                      </div>      
                         <br>
-                    <p><strong>Released Date:</strong>${tempMovie.release_date}</strong> </p><br>
-                    <p><strong>IMDB Rating:</strong>${tempMovie.rating}</p><br>
-                    <p><strong>Duration:</strong>${tempMovie.duration} min</p><br>
-                    <p><strong>Genres:</strong> ${tempMovie.genre}</p><br>
+                    <p><strong>Released Date: </strong>${tempMovie.release_date}</strong> </p><br>
+                    <p><strong>IMDB Rating: </strong>${tempMovie.rating}</p><br>
+                    <p><strong>Duration: </strong>${tempMovie.duration} min</p><br>
+                    <p><strong>Genres: </strong> ${tempMovie.genre}</p><br>
                     <p>${tempMovie.description}</p><br>
                         
                         
                         
-                        <a href="testedit.jsp?movie_id=${tempMovie.movie_id}" class="popup-button">Edit</a> <br> <br>
+                        <a href="testedit.jsp?movie_id=${tempMovie.movie_id}" class="popup-button">Edit</a> 
                         <!-- Update Delete button to call DeleteMovieServlet -->
 <a href="DeleteMovieServlet?movie_id=${tempMovie.movie_id}" class="popup-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</a>
 
@@ -333,41 +334,10 @@ footer a:hover {
     
     
     
- <c:forEach var="tempMovie" items="${MOVIES_LIST}">
-    <div class="film-card">
-        <div class="film-image-container">
-            <img src="${tempMovie.imageURL}" alt="${tempMovie.title}">
-            <div class="popup-overlay">
-                <div class="popup-details">
-                    <h2>${tempMovie.title}</h2>
-                      <p><strong>Released Date:</strong>${tempMovie.release_date}</strong> </p>
-                    <p><strong>IMDB Rating:</strong>${tempMovie.rating}</p>
-                    <p><strong>Duration:</strong>${tempMovie.duration} min</p>
-                    <p><strong>Genres:</strong> ${tempMovie.genre}</p>
-                    <p>${tempMovie.description}</p>
-                        
-                        
-                    
-                    <div class="popup-buttons">
-                        <a href="BuyTickets.jsp" class="popup-button">BUY TICKETS</a><br> <br>
-                        <a href="${tempMovie.trailerURL}" class="popup-button">WATCH TRAILER</a>
-                    </div>
-                </div>
-                      
-            </div>
-                     
-        </div>
-                    
-                    <a href="testedit.jsp?movie_id=${tempMovie.movie_id}" class="popup-button">Edit</a> <br> <br>
-                        <!-- Update Delete button to call DeleteMovieServlet -->
-<a href="DeleteMovieServlet?movie_id=${tempMovie.movie_id}" class="popup-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</a>
-
-    </div>
-                      
-</c:forEach>
 
 
 
+  
     
     
     
@@ -376,28 +346,6 @@ footer a:hover {
     
     
     
-    
-    
-        
- <table border="1" cellspacing="1" cellpadding="1">
-               
-                <tbody>
-                    <c:forEach var= "tempMovie" items="${MOVIES_LIST}">
-                    <tr>
-                        <td>${tempMovie.title}</td>
-                        <td>${tempMovie.description}</td>
-                        <td>${tempMovie.duration}</td>
-                        <td>${tempMovie.rating}</td>
-                        <td>${tempMovie.release_date}</td>
-                        <td>${tempMovie.genre}</td>
-                        <td>${tempMovie.imageURL}</td>
-                        <td>${tempMovie.trailerURL}</td>
-                    </tr>
-                    </c:forEach>
-                    
-                 
-                </tbody>
-            </table>
 
             
     
