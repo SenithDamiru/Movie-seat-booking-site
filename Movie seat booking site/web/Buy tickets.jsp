@@ -188,7 +188,7 @@
                     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
                     <div class="showtime" onclick="selectShowtime(this)">04:15 PM</div>
                     <div class="showtime" onclick="selectShowtime(this)">07:00 PM</div>
-                    <a href="seats.html" class="select-seat">BOOK</a>
+                    <a href="seats.jsp" class="select-seat">BOOK</a>
                 </div>
 
                 <div class="theater">
@@ -219,14 +219,14 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">09:00 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">12:45 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">03:30 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">07:15 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">09:30 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -235,13 +235,13 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">10:00 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">01:45 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">04:30 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">08:45 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -250,14 +250,14 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">09:15 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">12:30 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">03:45 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">07:00 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">09:15 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -266,13 +266,13 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">11:00 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">02:15 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">05:00 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">07:45 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -281,13 +281,13 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">08:30 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">11:45 AM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">04:15 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">09:00 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -296,13 +296,13 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">01:00 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">05:30 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">11:15 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">06:45 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -311,13 +311,13 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">10:30 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">03:00 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">07:30 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">09:45 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
 <br>
@@ -326,13 +326,13 @@
     <h3>Scope Cinemas Multiplex - Havelock City Mall</h3>
     <div class="showtime" onclick="selectShowtime(this)">08:45 AM</div>
     <div class="showtime" onclick="selectShowtime(this)">01:15 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 <div class="theater">
     <h3>Scope Cinemas Multiplex - Colombo City Centre</h3>
     <div class="showtime" onclick="selectShowtime(this)">05:45 PM</div>
     <div class="showtime" onclick="selectShowtime(this)">08:15 PM</div>
-    <a href="seats.html" class="select-seat">BOOK</a>
+    <a href="seats.jsp" class="select-seat">BOOK</a>
 </div>
 
             </div>
