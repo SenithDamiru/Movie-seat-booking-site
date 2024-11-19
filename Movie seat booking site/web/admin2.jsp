@@ -523,7 +523,7 @@
         <div style="margin-bottom: 20px;">
             <img src="logo.png" alt="Film Hub Logo" style="width: 100px; height: auto; margin-bottom: 10px;">
             <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.8em;">Film Hub Movie Theater</h2>
-            <p style="color:#ff6600 max-width: 500px; margin: 10px auto;">
+            <p style="color:#ff6600; max-width: 500px; margin: 10px auto;">
                 Your ultimate movie experience! Enjoy the latest blockbusters, comfortable seating, and exceptional service at Film Hub. Where every film feels like home.
             </p>
         </div>

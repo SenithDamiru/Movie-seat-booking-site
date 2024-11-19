@@ -265,6 +265,41 @@ footer a:hover {
         .banner-buttons .watch-trailer:hover {
             opacity: 0.8;
         }
+        
+        
+        
+        /* Basic button style */
+.popup-button {
+    background-color: #32CD32; /* Light green color */
+    color: white;              /* White text color */
+    padding: 10px 20px;        /* Padding around the text */
+    text-decoration: none;     /* Remove underline from links */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 16px;           /* Font size */
+    text-align: center;        /* Centered text */
+    display: inline-block;     /* Display as inline block for padding */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Hover effect */
+.popup-button:hover {
+    background-color: #66c466; /* Darker green on hover */
+    transform: scale(1.1);      /* Slightly enlarge the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Optional: Focus style for better accessibility */
+.popup-button:focus {
+    outline: none;             /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(102, 204, 102, 0.5); /* Green outline when focused */
+}
+
+        
+        
+        
+        
+        
+        
     </style>
 </head>
 <body>
@@ -304,7 +339,6 @@ footer a:hover {
                         
                         <a href="${tempMovie.trailerURL}" class="watch-trailer">WATCH TRAILER</a>
                         
-                        
                     </div>
                 </div>
                      </div>      
@@ -318,10 +352,13 @@ footer a:hover {
                         
                         
                         <a href="testedit.jsp?movie_id=${tempMovie.movie_id}" class="popup-button">Edit</a> 
-                        <!-- Update Delete button to call DeleteMovieServlet -->
-<a href="DeleteMovieServlet?movie_id=${tempMovie.movie_id}" class="popup-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</a>
+                        <!-- Update Delete button to call DeleteMovieServlet --> &nbsp;&nbsp;
+                <a href="DeleteMovieServlet?movie_id=${tempMovie.movie_id}" class="popup-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</a>
 
             </div>
+                
+                
+                
                         
               </c:forEach>
            
