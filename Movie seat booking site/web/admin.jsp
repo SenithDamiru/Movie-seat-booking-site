@@ -1,3 +1,14 @@
+
+<%@ page import="javax.servlet.http.HttpSession" %>
+
+
+<%
+    if (session == null || session.getAttribute("admin_id") == null) {
+        response.sendRedirect("AdminLogin.jsp");
+    }
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Movie Booking</title>
     <link rel="stylesheet" href="admin.css">
+    
+    
 </head>
 <body>
     <div class="container">
@@ -35,7 +48,9 @@
             </form>
             
             
-            
+             <h2>Welcome, <%= session.getAttribute("username") %>!</h2>
+    <p>This is the admin dashboard.</p>
+    <a href="Logout">Logout</a>
             
             
             

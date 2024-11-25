@@ -18,19 +18,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <div class="logo">
             <span class="film">Film</span><span class="hub">Hub</span>
         </div>
-        <h1>Login to Film Hub</h1>
-        <form action="LoginServlet" method="POST">
+        <h1>Admin Login to Film Hub</h1>
+      <form action="AdminLogin" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit" class="btn">Login</button>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+        <button type="submit" class="btn">Login</button>
         </form>
-        <p>Don't have an account? <a href="register.jsp">Register here</a></p>
+        
     </div>
     
-   
+     
 </body>
 </html>

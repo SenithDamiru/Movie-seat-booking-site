@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILM HUB</title>
     <link rel="icon" href="logo.png" type="image/x-icon">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* General Reset */
         * {
@@ -240,6 +242,62 @@
         footer a:hover {
             color: #ffffff;
         }
+        
+         /* Dropdown Styling */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-trigger {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .dropdown-trigger:hover {
+        color: #ff6600;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #1a1a1a;
+        min-width: 200px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 10px 15px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid #2c2c2c;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff6600;
+        color: #000000;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+        
+        
     </style>
 </head>
 <body>
@@ -254,12 +312,30 @@
             <a href="Locations.jsp">LOCATIONS</a>
             <a href="Meals.jsp">MEALS AND BEVERAGES</a>
             <a href="advetise.jsp">ADVERTISE</a>
-            <a href="admin.jsp">Admin Panel</a>
+           
         </nav>
         <div class="header-actions">
             <a href="Buy tickets.jsp" class="buy-tickets">BUY TICKETS</a>
             <a href="login.jsp">LOGIN</a>
         </div>
+        
+        
+         <!-- Dropdown -->
+        <div class="dropdown">
+            <a href="#services" class="dropdown-trigger"> <i class="fas fa-cog"></i> Settings ▼</a>
+            <div class="dropdown-content">
+                <a href="AdminLogin.jsp">Admin Login</a>
+                <a href="admin.jsp">Admin Panel</a>
+                <a href="#seo">Movies-Admin</a>
+                
+            </div>
+        </div>
+
+      
+    </div>
+        
+        
+        
     </header>
 
     <!-- Main Banner -->
