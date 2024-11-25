@@ -99,7 +99,7 @@ public class AdminLogin extends HttpServlet {
                 PrintWriter out = response.getWriter();
                 out.println("<html><body>");
                 out.println("<h3>Invalid username or password</h3>");
-                out.println("<a href='login.jsp'>Try Again</a>");
+                out.println("<a href='AdminLogin.jsp'>Try Again</a>");
                 out.println("</body></html>");
             }
         } catch (SQLException e) {

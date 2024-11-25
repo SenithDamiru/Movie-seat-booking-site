@@ -34,6 +34,7 @@ function reserveSeats() {
     seat.classList.remove('selected');
     seat.classList.add('reserved');
     seat.onclick = null;  // Disable onclick for reserved seats
+    window.open.href = "thankyou.html";
   });
   
   selectedSeats = [];

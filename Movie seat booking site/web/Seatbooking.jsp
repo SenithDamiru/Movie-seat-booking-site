@@ -331,7 +331,7 @@
   </div>
 
   <button id="reserve-button" class="reserve-button" onclick="reserveSeats()">Reserve Seats</button>
-
+  <a href="thankyou.html">OK</a>
   <script src="script.js"></script>
 </body>
 </html>
